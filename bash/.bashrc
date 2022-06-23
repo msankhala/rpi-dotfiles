@@ -125,4 +125,4 @@ fi
 
 ###### Update PATH ######
 # ADD composer to path
-pathadd $HOME/.arkade/bin/
+pathadd $HOME/.arkade/bin
