@@ -126,3 +126,6 @@ fi
 ###### Update PATH ######
 # ADD composer to path
 pathadd $HOME/.arkade/bin
+
+# Default kubeconfig file path
+export KUBECONFIG=~/.kube/config
