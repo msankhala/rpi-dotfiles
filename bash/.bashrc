@@ -1,6 +1,17 @@
+export DOTFILES_HOME=~/dotfiles
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+
+function include_file() {
+  filepath=$1
+  source $filepath
+  if [ -f $filepath ]; then
+    source $filepath
+  else
+      print "404: $filepath not found."
+  fi
+}
 
 # If not running interactively, don't do anything
 case $- in
@@ -97,9 +108,8 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ./.bash_aliases ]; then
-    source ./.bash_aliases
-fi
+# Include $DOTFILES_HOME/bash/.bashrc_alias
+include_file $DOTFILES_HOME/bash/.bashrc_alias
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
