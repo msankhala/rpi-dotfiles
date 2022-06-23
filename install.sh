@@ -7,5 +7,5 @@ export DOTFILES_HOME=~/dotfiles
 # link to the dotfiles
 if [ -f ~/.bashrc ]; then
   mv ~/.bashrc ~/.bashrc.bak
-  ln -s $DOTFILES_HOME/zsh/.bashrc ~/.bashrc
+  ln -s $DOTFILES_HOME/bash/.bashrc ~/.bashrc
 fi
