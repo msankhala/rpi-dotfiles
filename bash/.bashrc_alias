@@ -1,1 +1,13 @@
 alias k=kubectl
+# some more ls aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+alias gst='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch'
+alias gba='git branch -a'
