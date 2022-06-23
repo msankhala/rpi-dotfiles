@@ -8,6 +8,8 @@ export DOTFILES_HOME=~/dotfiles
 if [ -f ~/.bashrc ]; then
   mv ~/.bashrc ~/.bashrc.bak
   ln -s $DOTFILES_HOME/bash/.bashrc ~/.bashrc
+  source ~/.bashrc
 else
   ln -s $DOTFILES_HOME/bash/.bashrc ~/.bashrc
+  source ~/.bashrc
 fi
